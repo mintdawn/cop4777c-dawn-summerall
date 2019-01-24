@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="cop4777c_dawn_summerall.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:cop4777c_dawn_summerall"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="#FF222222">
+        <StackPanel Orientation="Vertical" Margin="20,20,20,20" Padding="20,20,20,20" CornerRadius="10,10,10,10" Background="#FFF5ECCF">
+        <TextBlock FontWeight="Bold" FontFamily="Bauhaus 93" FontSize="56" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" TextAlignment="Center" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Foreground="#FF222222">
+                CD Search
+        </TextBlock>
+            <Image x:Name="cdImg" Source="Assets/cd.png" Width="180" Height="180" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20" Opacity="0.9"/>
+            <Button x:Name="viewallButton" Width="250" Height="50" HorizontalAlignment="Center" Margin="0,0,0,20" Background="#FF222222" Foreground="#FFF5ECCF" FontFamily="Arial Black" FontWeight="Bold" FontSize="24" Click="ViewallButton_Click">
+                View Collection
+            </Button>
+            <Button x:Name="addcdButton" Width="250" Height="50" HorizontalAlignment="Center" Margin="0,0,0,20" Background="#FF222222" Foreground="#FFF5ECCF" FontFamily="Arial Black" FontWeight="Bold" FontSize="24" Click="AddcdButton_Click">
+                Add a CD
+            </Button>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Name="artistButton" Content="Artist" FontFamily="Arial Black" FontSize="18" Background="#FFF26530" Foreground="#FFF5ECCF" Width="120" FontWeight="Bold" Click="ArtistButton_Click" Height="50" Margin="0,0,10,10" />
+            <Button Name="genreButton" Content="Genre" FontFamily="Arial Black" FontSize="18" Background="#FF217E76" Foreground="#FFF5ECCF" Width="120" FontWeight="Bold" Height="50" Margin="10,0,0,10" Click="GenreButton_Click" />
+        </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Name="moodButton" Content="Mood" FontFamily="Arial Black" FontSize="18" Background="#FF71A235" Foreground="#FFF5ECCF" Width="120" FontWeight="Bold" Height="50" Margin="0,10,10,0" Click="MoodButton_Click" />
+                <Button x:Name="decadeButton" Content="Decade" FontFamily="Arial Black" FontSize="18" Foreground="#FFF5ECCF" Background="#FFE61E28" Height="50" Width="120" FontWeight="Bold" Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="DecadeButton_Click" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
