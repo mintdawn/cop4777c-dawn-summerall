@@ -8,28 +8,11 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid Background="#FFF26530">
-        <StackPanel Margin="20,20,20,20" Background="#FF222222" CornerRadius="10,10,10,10">
-            <TextBlock x:Name="artistTitle" Text="CD's By Artist" FontWeight="Normal" FontFamily="Bauhaus 93" FontSize="36" Foreground="#FFF26530" Margin="0,20,0,10" FontStretch="Normal" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" HorizontalAlignment="Center"/>
-            
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <ComboBox Name="ComboxBox1" ItemsSource="{Binding Artist}" Width="200" Margin="5,0" VerticalAlignment="Center"></ComboBox>
-                <Button x:Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" VerticalAlignment="Center" Click="Submit_Click" Padding="10,10,10,10" Margin="10,0,0,0" FontFamily="Arial Black" FontWeight="Bold" FontSize="15" RequestedTheme="Dark"/>
-                
-            </StackPanel>
-            
-           
-            <ListView Name="ListItems" RelativePanel.Below="btnRefresh" Margin="0,20,0,0" Width="250" Height="350" Background="#FFF5ECCF" RelativePanel.AlignHorizontalCenterWithPanel="True" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0,0,0,10" >
-                            <ListViewItem  FontWeight="Bold" FontSize="14" Content="{Binding Artist}"/>
-                            <ListViewItem  FontSize="12" Content="{Binding Title}"/>
-                        </StackPanel>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-            <Button x:Name="mainButton" Content="Main Page" FontFamily="Arial Black" FontWeight="Bold" FontSize="20" Click="MainButton_Click" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" Padding="10,10,10,10" UseLayoutRounding="True" Margin="0,20,0,0" HorizontalAlignment="Center" RequestedTheme="Dark"/>
+    <Grid Background="#FF444444">
+        <StackPanel Margin="20,20,20,20" Background="White" CornerRadius="10,10,10,10">
+            <TextBlock x:Name="title" Text="View the Web" FontWeight="Normal" FontFamily="Bauhaus 93" FontSize="36" Foreground="#FF555555" Margin="0,20,0,10" FontStretch="Normal" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" HorizontalAlignment="Center"/>
+            <WebView Source="https://www.rasmussen.edu" VerticalAlignment="Center"  HorizontalAlignment="Center" Height="430" Width="300" />
+            <Button x:Name="mainButton" Content="Main Page" FontFamily="Arial Black" FontWeight="Bold" FontSize="20" Background="#FF222222" Foreground="#FFF5ECCF" Click="MainButton_Click"  Padding="10,10,10,10" UseLayoutRounding="True" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,10,0,0"/>
         </StackPanel>
     </Grid>
 </Page>

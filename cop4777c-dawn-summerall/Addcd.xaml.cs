@@ -66,7 +66,7 @@ namespace cop4777c_dawn_summerall
 
                 await App.MobileService.GetTable<TodoItem>().InsertAsync(item);
                 var dialog = new MessageDialog("Successful!");
-                clearBoxes();
+                ClearBoxes();
                 await dialog.ShowAsync();
             }
             catch (Exception em)
@@ -76,7 +76,7 @@ namespace cop4777c_dawn_summerall
             }
         }
         
-        public void clearBoxes ()
+        public void ClearBoxes ()
         {
             titleText.Text = string.Empty;
             artistText.Text = string.Empty;

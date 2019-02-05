@@ -68,20 +68,17 @@ namespace cop4777c_dawn_summerall
             else
             {
                 ListItems.ItemsSource = items;
-
-                this.btnRefresh.IsEnabled = true;
             }
-        }
-
-
-        async private void btnRefresh_Click_1(object sender, RoutedEventArgs e)
-        {
-            await RefreshTodoItems();
         }
 
         private void MainButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage), null);
+        }
+
+        private async void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            await RefreshTodoItems();
         }
     }
 }

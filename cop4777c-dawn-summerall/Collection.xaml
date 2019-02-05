@@ -5,29 +5,26 @@
     xmlns:local="using:cop4777c_dawn_summerall"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
+    mc:Ignorable="d" Loaded="Page_Loaded"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid Background="#FF222222">
-        <StackPanel Margin="20,20,20,20" Background="#FFF5ECCF" CornerRadius="10,10,10,10">
+    <Grid Background="#FF444444">
+        <StackPanel Margin="20,20,20,20" Background="White" CornerRadius="10,10,10,10">
             <TextBlock x:Name="collectionTitle" Text="View Collection" FontWeight="Normal" FontFamily="Bauhaus 93" FontSize="36" Foreground="#FF222222" Margin="0,20,0,10" FontStretch="Normal" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" HorizontalAlignment="Center"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center"/>
-
-
-            <Button x:Name="btnRefresh" Content="List All CD's" HorizontalAlignment="Center" Click="btnRefresh_Click_1" Margin="0,20,0,0" Padding="10,10,10,10" FontFamily="Arial Black" FontWeight="Bold" Foreground="#FFF5ECCF" Background="#FF222222" Width="200" Height="50" VerticalAlignment="Stretch"/>
-            <ListView Name="ListItems" RelativePanel.Below="btnRefresh" Margin="0,20,0,0" Width="250" Height="300" Background="#FFF5ECCF" RelativePanel.AlignHorizontalCenterWithPanel="True" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <ListView Name="ListItems" RelativePanel.Below="btnRefresh" Width="250" Height="430" Background="White" RelativePanel.AlignHorizontalCenterWithPanel="True" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="0,0,0,10" >
-                            <ListViewItem  FontWeight="Bold" FontSize="14" Content="{Binding Title}"/>
-                            <ListViewItem  FontSize="12" Content="{Binding Artist}"/>
-                            <ListViewItem  FontSize="12" Content="{Binding Genre}"/>
-                            <ListViewItem  FontSize="12" Content="{Binding Year}"/>
+                            <TextBlock  FontWeight="Bold" FontSize="14" Text="{Binding Title}"/>
+                            <TextBlock  FontSize="12" Text="{Binding Artist}"/>
+                            <TextBlock  FontSize="12" Text="{Binding Genre}"/>
+                            <TextBlock  FontSize="12" Text="{Binding Year}"/>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <Button x:Name="mainButton" Content="Main Page" FontFamily="Arial Black" FontWeight="Bold" FontSize="20" Background="#FF222222" Foreground="#FFF5ECCF" Click="MainButton_Click" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" Padding="10,10,10,10" UseLayoutRounding="True" Margin="0,20,0,0" HorizontalAlignment="Center"/>
+            <Button x:Name="mainButton" Content="Main Page" FontFamily="Arial Black" FontWeight="Bold" FontSize="20" Background="#FF222222" Foreground="White" Click="MainButton_Click" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch" Padding="10,10,10,10" UseLayoutRounding="True" Margin="0,20,0,0" HorizontalAlignment="Center"/>
         </StackPanel>
     </Grid>
 </Page>

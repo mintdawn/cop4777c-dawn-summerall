@@ -34,27 +34,6 @@ namespace cop4777c_dawn_summerall
             this.InitializeComponent();
         }
 
-
-        private void ArtistButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Artist), null);
-        }
-
-        private void GenreButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Genre), null);
-        }
-
-        private void MoodButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Mood), null);
-        }
-
-        private void DecadeButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Decade), null);
-        }
-
         private void ViewallButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(Collection), null);
@@ -63,6 +42,11 @@ namespace cop4777c_dawn_summerall
         private void AddcdButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(Addcd), null);
+        }
+
+        private void ArtistButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Artist), null);
         }
     }
 }

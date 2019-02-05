@@ -8,8 +8,8 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid Background="#FF222222">
-        <StackPanel Margin="20,20,20,20" Background="#FFF5ECCF" CornerRadius="10,10,10,10" HorizontalAlignment="Stretch">
+    <Grid Background="#FF444444">
+        <StackPanel Margin="20,20,20,20" Background="White" CornerRadius="10,10,10,10" HorizontalAlignment="Stretch">
             <TextBlock x:Name="addcdTitle" Text="Add a CD" FontWeight="Normal" FontFamily="Bauhaus 93" FontSize="36" Foreground="#FF222222" Margin="0,20,0,10" FontStretch="Normal" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" HorizontalAlignment="Center"/>
             
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center"/>
@@ -17,7 +17,7 @@
             <TextBox x:Name="artistText" PlaceholderText="CD Artist" Width="250" Height="32" HorizontalAlignment="Center" Margin="0,0,0,10"/>
             <TextBox x:Name="genreText" PlaceholderText="CD Genre" Width="250" Height="32" HorizontalAlignment="Center" Margin="0,0,0,10"/>
             <TextBox x:Name="yearText" PlaceholderText="CD Decade" Width="250" Height="32" HorizontalAlignment="Center" Margin="0,0,0,10"/>
-            <Button x:Name="addSubmitButton" Content="Add CD Info" HorizontalAlignment="Center" VerticalAlignment="Stretch" Background="#FF222222" Height="50" Margin="0,20,0,0" Foreground="#FFF5ECCF" FontFamily="Arial Black" FontWeight="Bold" FontSize="20" Padding="10,10,10,10" Click="AddSubmitButton_Click"/>
+            <Button x:Name="addSubmitButton" Content="Add CD Info" HorizontalAlignment="Center" VerticalAlignment="Stretch" Background="#FF222222" Height="50" Margin="0,20,0,0" Foreground="White" FontFamily="Arial Black" FontWeight="Bold" FontSize="20" Padding="10,10,10,10" Click="AddSubmitButton_Click"/>
             <Button x:Name="mainButton" Content="Main Page" FontFamily="Arial Black" FontWeight="Bold" FontSize="20" Background="#FF222222" Foreground="#FFF5ECCF" Click="MainButton_Click"  Padding="10,10,10,10" UseLayoutRounding="True" Margin="0,200,0,0" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
             
         </StackPanel>

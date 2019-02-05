@@ -28,55 +28,16 @@ namespace cop4777c_dawn_summerall
     /// </summary>
     public sealed partial class Artist : Page
     {
+
+  
         public Artist()
         {
             this.InitializeComponent();
         }
 
-        IMobileServiceTable<TodoItem> todoTable = App.MobileService.GetTable<TodoItem>();
-        MobileServiceCollection<TodoItem, TodoItem> items;
-
-        public class TodoItem
-        {
-            public string Title { get; set; }
-            public string Artist { get; set; }
-        }
-
-
-        private async Task RefreshTodoItems()
-        {
-            MobileServiceInvalidOperationException exception = null;
-            try
-            {
-                items = await todoTable
-                    .ToCollectionAsync();
-            }
-            catch (MobileServiceInvalidOperationException e)
-            {
-                exception = e;
-            }
-
-            if (exception != null)
-            {
-                await new MessageDialog(exception.Message, "Error loading items").ShowAsync();
-            }
-            else
-            {
-                ListItems.ItemsSource = items;
-
-                this.btnSubmit.IsEnabled = true;
-            }
-        }
-
-
         private void MainButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage), null);
-        }
-
-        async private void Submit_Click(object sender, RoutedEventArgs e)
-        {
-            await RefreshTodoItems();
         }
     }
 }
